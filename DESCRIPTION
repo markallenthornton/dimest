@@ -1,0 +1,13 @@
+Package: dimest
+Title: Dissimilarity Matrix Dimensionality Estimation
+Version: 0.0.1.0000
+Authors@R: person("Mark", "Thornton", email = "mark.allen.thornton@gmail.com", role = c("aut", "cre"))
+Description: Methods for estimating the dimensionality of a dissimilarity matrix
+    based on multidimensional scaling
+Depends:
+    R (>= 3.2.2)
+License: GPL 3.0
+LazyData: true
+Imports:
+    smacof
+RoxygenNote: 5.0.1.9000
