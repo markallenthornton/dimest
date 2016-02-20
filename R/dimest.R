@@ -1,6 +1,6 @@
 #' Estimate dimensionality of dissimilarity matrix
 #' 
-#' @description Wrapper function for dimesionality estimation methods
+#' @description Wrapper function for dimensionality estimation methods
 #' @usage dimest(dmat,epsratio=NULL,mds.control=list(type="ordinal",itmax=1000))
 #' @param dmat vectorized dissimilarity matrix, or m x n matrix of n vectorized dissimilarity matrices
 #' epsratio convergence criterion. Leave default = NULL for method specific defaults: dimest.cv = .001, dimest.R2 = .1
