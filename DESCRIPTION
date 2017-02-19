@@ -9,6 +9,6 @@ Depends:
 License: GPL 3.0
 LazyData: true
 Imports:
-    smacof
-	pracma
+    smacof (>= 1.8)
+	pracma (>= 1.9)
 RoxygenNote: 5.0.1.9000
