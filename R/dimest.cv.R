@@ -15,6 +15,7 @@
 #' dmat <- as.vector(dist(dat))
 #' dmat2 <- replicate(2,dmat+rnorm(4950))
 #' dimcvfit <- dimest.cv(dmat2)
+#' @export dimest.cv
 dimest.cv <- function(dmat,epsratio=.001,mds.control=list(type="ordinal",itmax=1000)){
   if (class(dmat)!="matrix"){
       stop("The argument 'dmat' must be a m x n matrix composed of (n) vectorized distance matrices.")

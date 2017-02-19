@@ -14,6 +14,7 @@
 #' dat <- matrix(rnorm(200),100,2)
 #' dmat <- as.vector(dist(dat))
 #' dimR2fit <- dimest.R2(dmat)
+#' @export dimest.R2
 dimest.R2 <- function(dmat,epsratio=.1,mds.control=list(type="ordinal",itmax=1000)){
   ndim <- 1
   converged = FALSE

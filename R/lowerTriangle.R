@@ -7,6 +7,7 @@
 #' @examples
 #' mat <- as.matrix(dist(1:10))
 #' lowerTriangle(mat)
+#' @export lowerTriangle
 lowerTriangle <- function(m){
   return(m[lower.tri(m)])
 }

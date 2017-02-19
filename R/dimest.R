@@ -20,6 +20,7 @@
 #' dmat2 <- replicate(2,dmat+rnorm(4950))
 #' dimR2fit <- dimest(dmat)
 #' dimcvfit <- dimest(dmat2)
+#' @export dimest
 dimest <- function(dmat,epsratio=NULL,mds.control=list(type="ordinal",itmax=1000)){
   dmatdim <- dim(dmat)
   if(is.null(dmatdim)){

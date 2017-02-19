@@ -17,7 +17,7 @@ cv.cor for dimest.cv, vector of mean crossvalidated correlations between mds con
 r2 for dimest.R2, R-squared of configuration with ndim dimensions
 }
 \description{
-Wrapper function for dimesionality estimation methods
+Wrapper function for dimensionality estimation methods
 }
 \details{
 Wrapper function for dimest.cv and dimest.R2. Detects which method to use based on whether dmat argument is
