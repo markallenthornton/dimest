@@ -1,5 +1,5 @@
 #' Estimate dimensionality by crossvalidation
-#' 
+#'
 #' @description Estimate dimensionality by change in crossvalidated multidimensional scaling fit
 #' @usage dimest.cv(dmat,epsratio=.001,mds.control=list(type="ordinal",itmax=1000))
 #' @param dmat m x n matrix of n vectorized dissimilarity matrices
@@ -9,13 +9,15 @@
 #' cv.cor vector of mean crossvalidated correlations between mds configurations and left out data
 #' @details Defines identity matrix of dimensions n x n. Reproduces functionality of identically named MATLAB function.
 #' @seealso \code{\link{smacofSym}} \code{\link{dimest}} \code{\link{dimest.R2}}
-#' @examples 
+#' @examples
 #' set.seed(1)
 #' dat <- matrix(rnorm(200),100,2)
 #' dmat <- as.vector(dist(dat))
 #' dmat2 <- replicate(2,dmat+rnorm(4950))
 #' dimcvfit <- dimest.cv(dmat2)
 #' @export dimest.cv
+#' @import pracma
+#' @import smacof
 dimest.cv <- function(dmat,epsratio=.001,mds.control=list(type="ordinal",itmax=1000)){
   if (class(dmat)!="matrix"){
       stop("The argument 'dmat' must be a m x n matrix composed of (n) vectorized distance matrices.")
