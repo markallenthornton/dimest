@@ -21,7 +21,7 @@ dimest.R2 <- function(dmat,epsratio=.1,mds.control=list(type="ordinal",itmax=100
   r2last <- 0
   while (!converged){
     mdfit <- smacof::smacofSym(squareform(dmat),ndim,type=mds.control$type,itmax=mds.control$itmax)
-    r2 <- cor(mdfit$confdiss,dmat)^2
+    r2 <- cor(mdfit$confdist,dmat)^2
     if (ndim == 1){
       r2eps <- epsratio*r2
     }
