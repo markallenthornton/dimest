@@ -27,12 +27,12 @@ dimest <- function(dmat,epsratio=NULL,mds.control=list(type="ordinal",itmax=1000
     if (is.null(epsratio)){
       espratio = .1
     }
-    dimres <- dimest.R2(dmat,espratio,mds.control)
+    dimres <- dimest.R2(dmat,epsratio,mds.control)
   } else {
     if (is.null(epsratio)){
       espratio = .001
     }
-    dimres <- dimest.cv(dmat,espratio,mds.control)
+    dimres <- dimest.cv(dmat,epsratio,mds.control)
   }
   return(dimres)
 }
