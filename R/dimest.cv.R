@@ -37,7 +37,7 @@ dimest.cv <- function(dmat,epsratio=.001,mds.control=list(type="ordinal",itmax=1
     curdimcor <- rep(NA,ddims[2])
     for (n in 1:ddims[2]){
       mdfit <- smacof::smacofSym(squareform(dmat[,n]),i,type=mds.control$type,itmax = mds.control$itmax)
-      curdimcor[n]<-cor(mdfit$confdiss,dmeans[[n]])
+      curdimcor[n]<-cor(mdfit$confdist,dmeans[[n]])
     }
     avgdimcor[i]<-mean(curdimcor)
     if (i > 1){
